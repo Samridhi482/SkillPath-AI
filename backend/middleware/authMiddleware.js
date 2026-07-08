@@ -2,11 +2,6 @@ import jwt from 'jsonwebtoken';
 import User from '../models/User.js';
 
 const protect = async (req, res, next) => {
-  console.log("========== AUTH DEBUG ==========");
-  console.log("Origin:", req.headers.origin);
-  console.log("Cookies:", req.cookies);
-  console.log("JWT:", req.cookies.jwt);
-
   
   let token = req.cookies.jwt;
 
